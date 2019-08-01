@@ -1,12 +1,10 @@
-# Delivery JavaScript Library
+# RunMyProcess Delivery - Backoffice Generator
 
 ## Presentation
 
-This JavaScript library is intended to be used  by RunMyProcess Delivery Team in order to implement standard functions.
+This JavaScript library is intended to be used  by RunMyProcess Delivery Team in order to implement order to implement collections backoffices..
 
-__Version: 1.0__
-
-Copyright (c) [Fujitsu RunMyProcess](https://www.runmyprocess.com/) - 2017
+Copyright (c) [Fujitsu RunMyProcess](https://www.runmyprocess.com/) - 2019
 
 ## Authors
 
@@ -15,4 +13,4 @@ Copyright (c) [Fujitsu RunMyProcess](https://www.runmyprocess.com/) - 2017
 
 ## Documentation
 
-[Delivery JavaScript Library documentation](https://runmyprocess.atlassian.net/wiki/spaces/javascript/overview)
+[Backoffice Generator documentation](https://runmyprocess.atlassian.net/wiki/spaces/DK/pages/569311397/Howto+-+Design+a+web+interface+-+Back+office)

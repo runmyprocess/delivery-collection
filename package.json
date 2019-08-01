@@ -1,6 +1,6 @@
 {
   "name": "runmyprocess-collection-backoffice",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "This JavaScript library is intended to be used by RunMyProcess Delivery Team in order to implement collections backoffices.",
   "directories": {
     "doc": "./doc",
