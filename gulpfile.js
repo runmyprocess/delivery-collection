@@ -6,7 +6,6 @@
 
 // Main
 const gulp = require('gulp')
-const webpack = require('webpack-stream')
 
 // Optimization
 const babel = require('gulp-babel')
@@ -14,7 +13,6 @@ const uglify = require('gulp-uglify')
 
 // Test
 const eslint = require('gulp-eslint')
-const mocha = require('gulp-mocha')
 
 // Documentation
 const documentation = require('gulp-documentation')
@@ -25,82 +23,31 @@ const fs = require('fs')
 const rename = require('gulp-rename')
 const del = require('del')
 
-// Webpack config
-var webpackConfig = require('./webpack.config.js')
-
 // Data
 const packageJSON = require('./package.json')
-const prefix = 'runmyprocess-delivery-app'
+const prefix = 'runmyprocess-delivery-collection-backoffice'
 const source = './src/js/main.js'
-
-gulp.task('build', function () {
-  return gulp.src('src/index.js')
-    .pipe(webpack({
-      // Any configuration options...
-    }))
-    .pipe(babel())
-    .pipe(uglify())
-    .pipe(rename(function (path) {
-      path.basename += '.min'
-    }))
-    .pipe(gulp.dest('./dist'))
-})
 
 // LINT - ESLINT
 gulp.task('lint', () =>
-  gulp.src('src/js/**/*.js')
+  gulp.src('src/js/main.js')
     .pipe(eslint())
     .pipe(eslint.format('stylish'))
     .pipe(eslint.failAfterError())
 )
 
-// TEST - MOCHA
-gulp.task('test', function () {
-  gulp.src('./test/test.js', {read: false})
-  // `gulp-mocha` needs filepaths so you can't have any plugins before it
-    .pipe(mocha({
-      reporter: 'spec',
-      require: 'babel-register',
-      globals: {
-        should: require('chai')
-      }
-    }))
-    //.on('error', gutil.log)
-})
-
-// BUNDLE - WEBPACK
-gulp.task('bundle', function (done) {
+// BUILD
+gulp.task('build', (done) => {
   'use strict'
-  del(['dist/js/*.js', 'dist/js/tmp/*.js', '!dist/js/archive/*.js'])
+  del(['dist/js/*.js', '!dist/js/archive/*.js'])
   return gulp.src(source)
-    .pipe(
-      webpack(webpackConfig)
-        //.on('error', gutil.log)
-    )
-    .pipe(babel())
     .pipe(rename(prefix + '-' + packageJSON.version + '.js'))
-    .pipe(gulp.dest('./dist/js/tmp'))
-    .on('end', done)
-})
-
-// TRANSPILE - BABEL
-gulp.task('babel', () => {
-  return gulp.src('./dist/js/tmp/*.js')
-    // .pipe(babel())
-    .pipe(rename(function (path) {
-      path.basename += '.babel'
-    }))
-    .pipe(gulp.dest('dist/js'))
-})
-
-// MINIFY - UGLIFY
-gulp.task('minify', function () {
-  return gulp.src('./dist/js/tmp/*.js')
-    .pipe(uglify())
-    .pipe(rename(function (path) {
-      path.basename += '.min'
-    }))
     .pipe(gulp.dest('./dist/js'))
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(rename((path) => path.basename += '.min'))
+    .pipe(gulp.dest('./dist/js'))
+    .on('end', done)
 })
 
 // BACKUP
@@ -134,7 +81,7 @@ gulp.task('publish', () =>
 )
 
 // DEFAULT
-gulp.task('default', gulp.series('bundle', 'minify'))
+gulp.task('default', gulp.series('lint', 'build', 'publish'))
 
 // TRAVIS CI
-gulp.task('travis', gulp.series('bundle', 'minify', 'backup', 'publish'))
+gulp.task('travis', gulp.series('build', 'backup', 'publish'))

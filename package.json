@@ -1,27 +1,16 @@
 {
-  "name": "runmyprocess-javascript-library",
-  "version": "1.0.0",
-  "description": "This JavaScript library is intended to be used  by RunMyProcess Delivery Team in order to implement standard functions.",
+  "name": "runmyprocess-collection-backoffice",
+  "version": "2.3.0",
+  "description": "This JavaScript library is intended to be used by RunMyProcess Delivery Team in order to implement collections backoffices.",
   "directories": {
     "doc": "./doc",
     "test": "./test"
   },
   "main": "index.js",
-  "dependencies": {
-    "britecharts": "^2.12.0",
-    "chart.js": "^2.8.0",
-    "d3": "^5.9.7",
-    "date-fns": "^1.30.1",
-    "lodash": "^4.17.15",
-    "numeral": "^2.0.6",
-    "pubsub-js": "^1.7.0",
-    "sweetalert": "^2.1.2",
-    "voca": "^1.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
-    "chai": "^4.2.0",
     "del": "^3.0.0",
     "documentation": "^12.0.3",
     "eslint": "^6.1.0",
@@ -37,31 +26,23 @@
     "gulp-babel": "^8.0.0",
     "gulp-documentation": "^3.2.1",
     "gulp-eslint": "^6.0.0",
-    "gulp-mocha": "^6.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sequence": "^1.0.0",
     "gulp-template": "^5.0.0",
-    "gulp-uglify": "^3.0.2",
-    "mocha": "^6.2.0",
-    "webpack": "^4.38.0",
-    "webpack-dev-server": "^3.7.2",
-    "webpack-stream": "^5.2.1"
+    "gulp-uglify": "^3.0.2"
   },
   "scripts": {
-    "bundle": "gulp bundle",
+    "bundle": "gulp build",
     "minify": "gulp minify",
     "lint": "gulp lint",
     "test": "gulp test",
     "doc": "gulp doc",
-    "gulp": "gulp",
-    "watch": "webpack --progress --watch",
-    "start": "webpack-dev-server --open"
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "https://fmartin@gitlab.runmyprocess.com/Delivery/javascript-library.git"
   },
-  "homepage": "https://runmyprocess.atlassian.net/wiki/spaces/delivery/pages/29884678/Howto+-+Use+the+JavaScript+library",
+  "homepage": "https://runmyprocess.atlassian.net/wiki/spaces/DK/pages/569311397/Howto+-+Design+a+web+interface+-+Back+office",
   "bugs": "https://runmyprocess.atlassian.net/secure/RapidBoard.jspa?projectKey=DELJS",
   "contributors": [
     {

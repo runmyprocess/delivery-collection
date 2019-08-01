@@ -4,8 +4,8 @@
 <head>
 
   <meta charset="utf-8">
-  <title>Fujitsu RunMyProcess - Delivery - JavaScript</title>
-  <meta name="description" content="Fujitsu RunMyProcess - Delivery JavaScript">
+  <title>Fujitsu RunMyProcess - Delivery - Backoffice Generator</title>
+  <meta name="description" content="Fujitsu RunMyProcess - Delivery - Backoffice Generator">
   <meta name="author" content="Fujitsu RunMyProcess">
 
   <!-- Google Fonts -->
@@ -32,7 +32,7 @@
     <!-- HEADER -->
     <div class="row">
       <div class="column">
-        <h1>Delivery JavaScript</h1>
+        <h1>Backoffice Generator</h1>
         <hr/>
       </div>
     </div>
@@ -44,8 +44,21 @@
 
         <!-- DOWNLOAD -->
         <h2>Download</h2>
-        <p>Download the latest version ( <%- version %> ) of the Delivery JavaScript library.
-        <p><a class="button" href="dist/js/<%- prefix %>-<%- version %>.min.js" download>Download</a></p>
+        <p>Download the latest version (<%- version %>) of the Backoffice Generator library.
+
+          <div class="row">
+
+            <div class="column column-50">
+              <h4>Development Version</h4>
+              <p><a class="button" href="dist/js/<%- prefix %>-<%- version %>.js" download>Download</a></p>
+            </div>
+
+            <div class="column column-50">
+              <h4>Production version</h4>
+              <p><a class="button" href="dist/js/<%- prefix %>-<%- version %>.min.js" download>Download</a></p>
+            </div>
+
+          </div>
 
         <!-- ARCHIVES -->
         <h2>Archives</h2>
