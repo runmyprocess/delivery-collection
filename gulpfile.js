@@ -31,7 +31,9 @@ const source = './src/js/main.js'
 // LINT - ESLINT
 gulp.task('lint', () =>
   gulp.src('src/js/main.js')
-    .pipe(eslint())
+    //.pipe(eslint())
+    .pipe(eslint({fix: true}))
+    .pipe(gulp.dest('./src/js'))
     .pipe(eslint.format('stylish'))
     .pipe(eslint.failAfterError())
 )
