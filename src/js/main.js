@@ -25,7 +25,7 @@
     key: null,
     lang: 'en',
     collection: 'col_item',
-    widgetForm: 'id_form',
+    widget_form: 'id_form',
     widget_action: 'id_action',
     widget_report: 'id_report',
     modal: {
@@ -191,7 +191,7 @@
     this.key = _.get(configuration, 'key')
     this.lang = _.get(configuration, 'lang')
     this.collection = _.get(configuration, 'collection')
-    this.widgetForm = _.get(configuration, 'widgetForm')
+    this.widget_form = _.get(configuration, 'widget_form')
     this.widget_action = _.get(configuration, 'widget_action')
     this.widget_report = _.get(configuration, 'widget_report')
     this.editor = _.get(configuration, 'editor')
@@ -248,7 +248,7 @@
           window[this.widget_action].setHtml(buttonHtml)
 
           // Show the form and open the modal window
-          window[this.widgetForm].setVisible(true)
+          window[this.widget_form].setVisible(true)
           this.openModal('create')
           break
 
@@ -266,7 +266,7 @@
           window[this.widget_action].setHtml(buttonHtml)
 
           // Show the form
-          window[this.widgetForm].setVisible(true)
+          window[this.widget_form].setVisible(true)
 
           // Retrieve the item from the collection
           this.readItem(uid)
@@ -349,7 +349,7 @@
         return false
       }
 
-      var widgetForm = this.widgetForm
+      var widgetForm = this.widget_form
       var that = this
 
       // Trigger read success callback
@@ -616,7 +616,7 @@
       if (debug === true) { console.log('DEBUG: (' + this.name + ') Open Modal') }
 
       // id_MyComponent is the ID of the element that we want to deploy in the window
-      var windowComp = $('[id="' + this.widgetForm + '"]').dialog({
+      var windowComp = $('[id="' + this.widget_form + '"]').dialog({
         autoOpen: false,
         modal: true,
         stack: false,
@@ -638,7 +638,7 @@
         /* HACK END */
       })
 
-      // window[this.widgetForm].setVisible(true)
+      // window[this.widget_form].setVisible(true)
       $(windowComp).dialog('open')
     }
 
@@ -651,7 +651,7 @@
      *
      */
     function closeModal () {
-      $('[id="' + this.widgetForm + '"]').dialog('close')
+      $('[id="' + this.widget_form + '"]').dialog('close')
     }
 
     /*
@@ -666,7 +666,7 @@
     function resetFormData () {
       if (debug === true) { console.log('DEBUG: Reset Form Data') }
 
-      var widgetForm = this.widgetForm
+      var widgetForm = this.widget_form
 
       // Reset the fields of the edition form
       // Loop through all widgets of the web interface
@@ -721,14 +721,14 @@
       }
 
       // CHECK: If the defined form widget doesn't exist in the web interface, display an error message and abort
-      if (!window[this.widgetForm] || window[this.widgetForm].getType() !== 'RMP_Table') {
-        console.log('%cERROR: %cYou shall create a Split Widget with the ID ' + this.widgetForm + ' in your web interface.', style.error, style.standard)
+      if (!window[this.widget_form] || window[this.widget_form].getType() !== 'RMP_Table') {
+        console.log('%cERROR: %cYou shall create a Split Widget with the ID ' + this.widget_form + ' in your web interface.', style.error, style.standard)
         check = false
       }
 
       // CHECK: If the defined action widget doesn't exist in the web interface, display an error message and abort
       if (!window[this.widget_action]) {
-        console.log('%cERROR: %cYou shall create an empty HTML Widget with the ID ' + this.widget_action + ' within the ' + this.widgetForm + ' Split Widget.', style.error, style.standard)
+        console.log('%cERROR: %cYou shall create an empty HTML Widget with the ID ' + this.widget_action + ' within the ' + this.widget_form + ' Split Widget.', style.error, style.standard)
         check = false
       }
 
@@ -749,7 +749,7 @@
         // CHECK: If any of the defined editor widgets doesn't exist in the web interface or isn't a Text Widget, display an error message and abort
         for (var i = 0; i < this.editor.length; i++) {
           if (!window[this.editor[i]] || window[this.editor[i]].getType() !== 'RMP_TextInput') {
-            console.log('%cERROR: %cYou shall create a Text Widget with the ID ' + this.editor[i] + ' within the ' + this.widgetForm + ' Split Widget in order to use the HTML wysiwyg editor.', style.error, style.standard)
+            console.log('%cERROR: %cYou shall create a Text Widget with the ID ' + this.editor[i] + ' within the ' + this.widget_form + ' Split Widget in order to use the HTML wysiwyg editor.', style.error, style.standard)
             check = false
           }
         }
@@ -821,7 +821,7 @@
     function getFormData () {
       if (debug === true) { console.log('DEBUG: Get Form Data') }
 
-      var widgetForm = this.widgetForm
+      var widgetForm = this.widget_form
       var editor = this.editor
       var input = {}
 
