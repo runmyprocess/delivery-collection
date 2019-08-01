@@ -400,7 +400,7 @@
                 if (widget.getType() === 'RMP_MultiSelectionListBox' || widget.getType() === 'RMP_MultiSelectionCheckBox') {
                   // ListOfMyVariables returns an array, the first element is the label, the second the variable
                   // If this variable exists in the record, set the widget accordingly
-                  if (record.hasOwnProperty(objectName)) {
+                  if (_.has(record, objectName)) {
                     widget.setPicked(JSON.stringify(record[objectName][label]), JSON.stringify(record[objectName][variable]))
                     // widget.setSelectedValue(record[variable])
                   } else {
@@ -408,7 +408,7 @@
                   }
                 } else {
                   // If this variable exists in the record, set the widget accordingly
-                  if (record.hasOwnProperty(objectName)) {
+                  if (_.has(record, objectName)) {
                     widget.setSelectedValue(record[objectName][variable])
                   } else {
                     widget.reset()
@@ -673,7 +673,7 @@
       RMPApplication.forEachWidget(function (widget) {
         // Select only the widgets inside the split widget
         var parent = widget.getParent()
-        if (parent && parent.conf.hasOwnProperty('id') && parent.conf.id === widgetForm) {
+        if (parent && _.has(parent.conf, 'id') && parent.conf.id === widgetForm) {
           // Reset the variable, depending of the widget's type
           switch (widget.getType()) {
             case 'RMP_ListBox':

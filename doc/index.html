@@ -1,20 +1,21 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset='utf-8' />
-  <title>  | Documentation</title>
+  <meta charset='utf-8'>
+  <title>runmyprocess-collection-backoffice 2.3.2 | Documentation</title>
+  <meta name='description' content='This JavaScript library is intended to be used by RunMyProcess Delivery Team in order to implement collections backoffices.'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
-  <link href='assets/style.css' type='text/css' rel='stylesheet' />
-  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/bass.css' rel='stylesheet'>
+  <link href='assets/style.css' rel='stylesheet'>
+  <link href='assets/github.css' rel='stylesheet'>
+  <link href='assets/split.css' rel='stylesheet'>
 </head>
-<body class='documentation'>
-  <div class='max-width-4 mx-auto'>
-    <div class='clearfix md-mxn2'>
-      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
-          <h3 class='mb0 no-anchor'></h3>
-          <div class='mb1'><code></code></div>
+          <h3 class='mb0 no-anchor'>runmyprocess-collection-backoffice</h3>
+          <div class='mb1'><code>2.3.2</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -35,59 +36,9 @@
               
                 
                 <li><a
-                  href='#isempty'
-                  class="">
-                  isEmpty
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#titlecase'
-                  class="">
-                  titleCase
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#propercase'
-                  class="">
-                  properCase
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
                   href='#date'
                   class="h5 bold black caps">
                   Date
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#isfuture'
-                  class="">
-                  isFuture
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#isafter'
-                  class="">
-                  isAfter
                   
                 </a>
                 
@@ -105,9 +56,9 @@
               
                 
                 <li><a
-                  href='#alert'
+                  href='#backoffice'
                   class="">
-                  alert
+                  Backoffice
                   
                 </a>
                 
@@ -115,9 +66,89 @@
               
                 
                 <li><a
-                  href='#inarray'
+                  href='#success'
                   class="">
-                  inArray
+                  success
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#success'
+                  class="">
+                  success
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#failure'
+                  class="">
+                  failure
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#failure'
+                  class="">
+                  failure
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#closemodal'
+                  class="">
+                  closeModal
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resetformdata'
+                  class="">
+                  resetFormData
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#checkinterface'
+                  class="">
+                  checkInterface
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#checkitem'
+                  class="">
+                  checkItem
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getformdata'
+                  class="">
+                  getFormData
                   
                 </a>
                 
@@ -126,16 +157,16 @@
             </ul>
           </div>
           <div class='mt1 h6 quiet'>
-            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
           </div>
         </div>
       </div>
-      <div class='fix-margin-3'>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
         
           
             <div class='keyline-top-not py2'><section class='py2 clearfix'>
 
-  <h2 id='String' class='mt0'>
+  <h2 id='string' class='mt0'>
     String
   </h2>
 
@@ -143,218 +174,13 @@
     <p>Here are some helper functions for strings.</p>
 
   
-</section>
-</div>
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='isempty'>
-      isEmpty
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Check if a given string is empty.</p>
-
-
-  <div class='pre p1 fill-light mt0'>isEmpty(string: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>string</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The string to check.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
-        Will evaluate to true if value is: null, undefined, NaN, empty string (""), 0 or false.
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='titlecase'>
-      titleCase
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Convert a given string to title case.</p>
-
-
-  <div class='pre p1 fill-light mt0'>titleCase</div>
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>string</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The string to convert to title case.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
-        Returns the title case string.
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='propercase'>
-      properCase
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Convert a string to the proper case.</p>
-
-
-  <div class='pre p1 fill-light mt0'>properCase(string: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>string</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The string to convert to title case.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
-        Returns the title case string.
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
+</section></div>
           
         
           
             <div class='keyline-top-not py2'><section class='py2 clearfix'>
 
-  <h2 id='Date' class='mt0'>
+  <h2 id='date' class='mt0'>
     Date
   </h2>
 
@@ -362,159 +188,13 @@
     <p>Here are some helper functions for dates.</p>
 
   
-</section>
-</div>
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='isfuture'>
-      isFuture
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Check if a given date is in the future.</p>
-
-
-  <div class='pre p1 fill-light mt0'>isFuture</div>
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>date</span> <code class='quiet'>(timestamp)</code>
-	    The date to check.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
-        The date is in the future.
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='isafter'>
-      isAfter
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Check if the first date is after the second one.</p>
-
-
-  <div class='pre p1 fill-light mt0'>isAfter</div>
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>date</span> <code class='quiet'>(timestamp)</code>
-	    The date that should be after the other one to return true.
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>dateToCompare</span> <code class='quiet'>(timestamp)</code>
-	    The date to compare with.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
-        The first date is after the second date.
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
+</section></div>
           
         
           
             <div class='keyline-top-not py2'><section class='py2 clearfix'>
 
-  <h2 id='Misc' class='mt0'>
+  <h2 id='misc' class='mt0'>
     Misc
   </h2>
 
@@ -522,31 +202,29 @@
     <p>Here are some helper functions for dates.</p>
 
   
-</section>
-</div>
+</section></div>
           
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='alert'>
-      alert
+    <h3 class='fl m0' id='backoffice'>
+      Backoffice
     </h3>
     
     
   </div>
   
 
-  <p>Display an alert message.</p>
-
-
-  <div class='pre p1 fill-light mt0'>alert(title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): html</div>
+  
+    <div class='pre p1 fill-light mt0'>new Backoffice(instanceName: any, configuration: any)</div>
   
   
 
+  
   
   
   
@@ -559,27 +237,16 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>title</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The title of the modal.
-
+            <span class='code bold'>instanceName</span> <code class='quiet'>(any)</code>
+	    
           </div>
           
         </div>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>text</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    A description for the modal.
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>type</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The type of the modal. You can choose between five built-in types which will show a corresponding icon animation: warning, error, success, info, question.
-
+            <span class='code bold'>configuration</span> <code class='quiet'>(any)</code>
+	    
           </div>
           
         </div>
@@ -590,13 +257,7 @@
   
 
   
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>html</code>:
-        Display the alert message.
 
-      
-    
   
 
   
@@ -613,26 +274,25 @@
           
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='inarray'>
-      inArray
+    <h3 class='fl m0' id='success'>
+      success
     </h3>
     
     
   </div>
   
 
-  <p>Checks if predicate returns truthy for any element of collection. Iteration is stopped once predicate returns truthy.</p>
-
-
-  <div class='pre p1 fill-light mt0'>inArray(collection: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, predicate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+    <div class='pre p1 fill-light mt0'>success(result: any)</div>
   
   
 
+  
   
   
   
@@ -645,18 +305,8 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>collection</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    The collection to iterate over.
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>predicate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
-	    The function invoked per iteration.
-
+            <span class='code bold'>result</span> <code class='quiet'>(any)</code>
+	    
           </div>
           
         </div>
@@ -667,13 +317,422 @@
   
 
   
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
-        Returns true if any element passes the predicate check, else false.
 
-      
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
     
+    <h3 class='fl m0' id='success'>
+      success
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>success(result: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>result</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='failure'>
+      failure
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>failure(error: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>error</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='failure'>
+      failure
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>failure(error: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>error</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='closemodal'>
+      closeModal
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>closeModal()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resetformdata'>
+      resetFormData
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>resetFormData()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='checkinterface'>
+      checkInterface
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>checkInterface()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='checkitem'>
+      checkItem
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>checkItem()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getformdata'>
+      getFormData
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>getFormData()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -691,8 +750,8 @@
         
       </div>
     </div>
-  </div>
   <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
   <script src='assets/site.js'></script>
 </body>
 </html>
