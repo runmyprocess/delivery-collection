@@ -32,69 +32,73 @@
     <!-- HEADER -->
     <div class="row">
       <div class="column">
-        <h1>Backoffice Generator</h1>
+        <h1>Backoffice Generator <%= version %></h1>
         <hr/>
       </div>
     </div>
 
     <div class="row">
-
-      <!-- BODY -->
-      <div class="column column-67">
-
-        <!-- DOWNLOAD -->
-        <h2>Download</h2>
-        <p>Download the latest version (<%- version %>) of the Backoffice Generator library.
-
-          <div class="row">
-
-            <div class="column column-50">
-              <h4>Development Version</h4>
-              <p><a class="button" href="dist/js/<%- prefix %>-<%- version %>.js" download>Download</a></p>
-            </div>
-
-            <div class="column column-50">
-              <h4>Production version</h4>
-              <p><a class="button" href="dist/js/<%- prefix %>-<%- version %>.min.js" download>Download</a></p>
-            </div>
-
-          </div>
-
-        <!-- ARCHIVES -->
-        <h2>Archives</h2>
-        <ul>
-          <% _.forEach(archives, function(archive) { %>
-            <li><a href="dist/js/archive/<%- archive %>" download><%- archive %></a></li>
-          <% }); %>
-        </ul>
-
-      </div>
-
-      <!-- SIDE COLUMN -->
       <div class="column">
 
-        <h2>About</h2>
+        <!-- DOWNLOAD -->
+        <div class="row">
+          <div class="column">
+            <h2>Download</h2>
+            <p>Download the latest version (<%- version %>) of the Backoffice Generator library.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column column-33">
+            <h4>Development Version</h4>
+            <p><a class="button" href="dist/js/<%- prefix %>-<%- version %>.js" download>Download Dev</a></p>
+          </div>
+
+          <div class="column column-33">
+            <h4>Production version</h4>
+            <p><a class="button" href="dist/js/<%- prefix %>-<%- version %>.min.js" download>Download Prod</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+
+        <div class="row">
+          <div class="column">
+            <h2>About</h2>
+          </div>
+        </div>
 
         <!-- PRESENTATION -->
-        <h3>Presentation</h3>
-        <p><%= description %></p>
-        <p>Version: <%= version %></p>
+        <div class="row">
+          <div class="column column-33">
+            <h3>Presentation</h3>
+            <p><%= description %></p>
+          </div>
 
-        <!-- SUPPORT -->
-        <h3>Support</h3>
-        <ul>
-          <li><a target="_blank" href="<%= homepage %>">Read the Howto Guide</a></li>
-          <li><a target="_blank" href="<%= bugs %>">Report an issue</a></li>
-          <li><a target="_blank" href="<%= github %>">Access the Github repository</a></li>
-        </ul>
+          <!-- SUPPORT -->
+          <div class="column column-33">
+            <h3>Support</h3>
+            <ul>
+              <li><a target="_blank" href="<%= homepage %>">Read the Howto Guide</a></li>
+              <li><a target="_blank" href="<%= bugs %>">Report an issue</a></li>
+              <li><a target="_blank" href="<%= github %>">Access the Github repository</a></li>
+            </ul>
+          </div>
 
-        <!-- CONTRIBUTORS -->
-        <h3>Contributors</h3>
-        <ul>
-          <% _.forEach(contributors, function(contributor) { %>
-            <li><a href="mailto:<%- contributor.email %>"><%- contributor.name %></a></li>
-          <% }); %>
-        </ul>
+          <!-- CONTRIBUTORS -->
+          <div class="column column-34">
+            <h3>Contributors</h3>
+            <ul>
+              <% _.forEach(contributors, function(contributor) { %>
+                <li><a href="mailto:<%- contributor.email %>"><%- contributor.name %></a></li>
+                <% }); %>
+            </ul>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -103,7 +107,7 @@
     <div class="row">
       <div class="column">
         <hr/>
-        <p>Copyright &copy; <a href="https://www.runmyprocess.com/">Fujitsu RunMyProcess</a> - 2017</p>
+        <p>Copyright &copy; <a href="https://www.runmyprocess.com/">Fujitsu RunMyProcess</a> - 2019</p>
       </div>
     </div>
 

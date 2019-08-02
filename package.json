@@ -44,6 +44,7 @@
   },
   "homepage": "https://runmyprocess.atlassian.net/wiki/spaces/DK/pages/569311397/Howto+-+Design+a+web+interface+-+Back+office",
   "bugs": "https://runmyprocess.atlassian.net/jira/software/projects/DBG/boards/87",
+  "github": "https://github.com/runmyprocess/delivery-collection.git",
   "contributors": [
     {
       "name": "David Courtaigne",
