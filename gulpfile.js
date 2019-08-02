@@ -75,6 +75,7 @@ gulp.task('publish', () =>
       contributors: packageJSON.contributors,
       homepage: packageJSON.homepage,
       bugs: packageJSON.bugs,
+      github: packageJSON.github,
       archives: fs.readdirSync('dist/js/archive/'),
       prefix: prefix
     }))
