@@ -35,7 +35,7 @@ gulp.task('lint', () =>
     .pipe(eslint({fix: true}))
     .pipe(gulp.dest('./src/js'))
     .pipe(eslint.format('stylish'))
-    .pipe(eslint.failAfterError())
+    //.pipe(eslint.failAfterError())
 )
 
 // BUILD

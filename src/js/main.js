@@ -503,7 +503,7 @@
         _.merge(getFormData.call(this), { uid: uid }),
 
         // Trigger update success callback
-        function success ()	{
+        function success () {
           DELIVERY.alert.success(that.message[that.lang].update.success)
           window[that.widget_report].refresh()
           closeModal.call(that)
@@ -547,7 +547,7 @@
         { uid: uid },
 
         // Trigger success callback
-        function success ()	{
+        function success () {
           DELIVERY.alert.success(that.message[that.lang].delete.success)
           window[that.widget_report].refresh()
         },

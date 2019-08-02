@@ -40,10 +40,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://fmartin@gitlab.runmyprocess.com/Delivery/javascript-library.git"
+    "url": "https://github.com/runmyprocess/delivery-collection.git"
   },
   "homepage": "https://runmyprocess.atlassian.net/wiki/spaces/DK/pages/569311397/Howto+-+Design+a+web+interface+-+Back+office",
-  "bugs": "https://runmyprocess.atlassian.net/secure/RapidBoard.jspa?projectKey=DELJS",
+  "bugs": "https://runmyprocess.atlassian.net/jira/software/projects/DBG/boards/87",
   "contributors": [
     {
       "name": "David Courtaigne",
