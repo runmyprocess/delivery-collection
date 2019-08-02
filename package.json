@@ -1,0 +1,59 @@
+{
+  "name": "runmyprocess-collection-backoffice",
+  "version": "2.3.2",
+  "description": "This JavaScript library is intended to be used by RunMyProcess Delivery Team in order to implement collections backoffices.",
+  "directories": {
+    "doc": "./doc",
+    "test": "./test"
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "del": "^3.0.0",
+    "documentation": "^12.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-config-standard-jsdoc": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsdoc": "^15.8.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-documentation": "^3.2.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-template": "^5.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "scripts": {
+    "bundle": "gulp build",
+    "minify": "gulp minify",
+    "lint": "gulp lint",
+    "test": "gulp test",
+    "doc": "gulp doc",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/runmyprocess/delivery-collection.git"
+  },
+  "homepage": "https://runmyprocess.atlassian.net/wiki/spaces/DK/pages/569311397/Howto+-+Design+a+web+interface+-+Back+office",
+  "bugs": "https://runmyprocess.atlassian.net/jira/software/projects/DBG/boards/87",
+  "github": "https://github.com/runmyprocess/delivery-collection.git",
+  "contributors": [
+    {
+      "name": "David Courtaigne",
+      "email": "dcourtaigne@runmyprocess.com"
+    },
+    {
+      "name": "Franck Martin",
+      "email": "fmartin@runmyprocess.com"
+    }
+  ],
+  "license": "ISC"
+}

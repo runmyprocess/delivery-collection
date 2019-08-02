@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "standard",
+    "standard-jsdoc"
+  ],
+  "plugins": [
+    "json"
+  ],
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "atomtest": true
+  }
+}

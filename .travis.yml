@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - "node"
+
+install:
+  - npm install
+
+cache:
+  directories:
+    - "node_modules"
+
+script: gulp travis
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
+
+notifications:
+  email: false
+  slack:
+    rooms:
+      - runmyprocess:5XzowTT2rMOzruRJ8zSEK4wI#delivery-javascript
+    on_success: always
+    on_failure: always

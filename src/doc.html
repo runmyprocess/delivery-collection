@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Fujitsu RunMyProcess - Delivery - Backoffice Generator</title>
+  <meta name="description" content="Fujitsu RunMyProcess - Delivery - Backoffice Generator">
+  <meta name="author" content="Fujitsu RunMyProcess">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,700i">
+
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+  <!-- Milligram CSS minified -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
+
+  <style media="screen">
+    body {
+      margin-top: 3rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="row">
+      <div class="column">
+        <h1>Backoffice Generator <%= version %></h1>
+        <hr/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+
+        <!-- DOWNLOAD -->
+        <div class="row">
+          <div class="column">
+            <h2>Download</h2>
+            <p>Download the latest version (<%- version %>) of the Backoffice Generator library.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column column-33">
+            <h4>Development Version</h4>
+            <p><a class="button" href="dist/js/<%- prefix %>-<%- version %>.js" download>Download Dev</a></p>
+          </div>
+
+          <div class="column column-33">
+            <h4>Production version</h4>
+            <p><a class="button" href="dist/js/<%- prefix %>-<%- version %>.min.js" download>Download Prod</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+
+        <div class="row">
+          <div class="column">
+            <h2>About</h2>
+          </div>
+        </div>
+
+        <!-- PRESENTATION -->
+        <div class="row">
+          <div class="column column-33">
+            <h3>Presentation</h3>
+            <p><%= description %></p>
+          </div>
+
+          <!-- SUPPORT -->
+          <div class="column column-33">
+            <h3>Support</h3>
+            <ul>
+              <li><a target="_blank" href="<%= homepage %>">Read the Howto Guide</a></li>
+              <li><a target="_blank" href="<%= bugs %>">Report an issue</a></li>
+              <li><a target="_blank" href="<%= github %>">Access the Github repository</a></li>
+            </ul>
+          </div>
+
+          <!-- CONTRIBUTORS -->
+          <div class="column column-34">
+            <h3>Contributors</h3>
+            <ul>
+              <% _.forEach(contributors, function(contributor) { %>
+                <li><a href="mailto:<%- contributor.email %>"><%- contributor.name %></a></li>
+                <% }); %>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="row">
+      <div class="column">
+        <hr/>
+        <p>Copyright &copy; <a href="https://www.runmyprocess.com/">Fujitsu RunMyProcess</a> - 2019</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

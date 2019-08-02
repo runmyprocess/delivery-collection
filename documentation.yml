@@ -1,0 +1,18 @@
+toc:
+  - name: String
+    description: |
+      Here are some helper functions for strings.
+  - isEmpty
+  - titleCase
+  - properCase
+  - name: Date
+    description: |
+      Here are some helper functions for dates.
+  - isAfter
+  - isFuture
+  - isAfter
+  - name: Misc
+    description: |
+      Here are some helper functions for dates.
+  - alert
+  - inArray
